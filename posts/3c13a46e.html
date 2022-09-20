@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="示例需要用户输入非字符串时记得添加函数1234567name &#x3D; input(&amp;#x27;你的名字叫什么?: &amp;#x27;)age &#x3D; int(input(&amp;#x27;你今年多大了？: &amp;#x27;))        #根据需求，设定名字为整数位height &#x3D; float(input(&amp;#x27;你的身高是多少？: &amp;#x27;))      #根据需求，身高可以延申到小数点。print(&amp;#x">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python基础之获取用户输入">
+<meta property="og:url" content="https://birkid.github.io/posts/3c13a46e.html">
+<meta property="og:site_name" content="静竹轩">
+<meta property="og:description" content="示例需要用户输入非字符串时记得添加函数1234567name &#x3D; input(&amp;#x27;你的名字叫什么?: &amp;#x27;)age &#x3D; int(input(&amp;#x27;你今年多大了？: &amp;#x27;))        #根据需求，设定名字为整数位height &#x3D; float(input(&amp;#x27;你的身高是多少？: &amp;#x27;))      #根据需求，身高可以延申到小数点。print(&amp;#x">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-09-18T15:40:39.000Z">
+<meta property="article:modified_time" content="2022-09-20T05:12:32.176Z">
+<meta property="article:author" content="千江月">
+<meta property="article:tag" content="pyhon">
+<meta property="article:tag" content="while循环">
+<meta property="article:tag" content="for循环">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Python基础之获取用户输入</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/posts/c9cc1d34.html"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/posts/198753ed.html"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://birkid.github.io/posts/3c13a46e.html"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://birkid.github.io/posts/3c13a46e.html&text=Python基础之获取用户输入"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://birkid.github.io/posts/3c13a46e.html&title=Python基础之获取用户输入"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://birkid.github.io/posts/3c13a46e.html&is_video=false&description=Python基础之获取用户输入"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Python基础之获取用户输入&body=Check out this article: https://birkid.github.io/posts/3c13a46e.html"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://birkid.github.io/posts/3c13a46e.html&title=Python基础之获取用户输入"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://birkid.github.io/posts/3c13a46e.html&title=Python基础之获取用户输入"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://birkid.github.io/posts/3c13a46e.html&title=Python基础之获取用户输入"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://birkid.github.io/posts/3c13a46e.html&title=Python基础之获取用户输入"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://birkid.github.io/posts/3c13a46e.html&name=Python基础之获取用户输入&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://birkid.github.io/posts/3c13a46e.html&t=Python基础之获取用户输入"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B"><span class="toc-number">1.</span> <span class="toc-text">示例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9C%80%E8%A6%81%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5%E9%9D%9E%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%97%B6%E8%AE%B0%E5%BE%97%E6%B7%BB%E5%8A%A0%E5%87%BD%E6%95%B0"><span class="toc-number">1.0.1.</span> <span class="toc-text">需要用户输入非字符串时记得添加函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A2%9E%E5%8A%A0%E6%8F%90%E7%A4%BA%E4%BF%A1%E6%81%AF"><span class="toc-number">1.0.2.</span> <span class="toc-text">增加提示信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#if%E8%AF%AD%E5%8F%A5%E5%9C%A8%E8%8E%B7%E5%8F%96%E8%BE%93%E5%85%A5%E7%9A%84%E8%BF%90%E7%94%A8"><span class="toc-number">1.0.3.</span> <span class="toc-text">if语句在获取输入的运用</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#while%E5%BE%AA%E7%8E%AF%E5%9C%A8%E8%8E%B7%E5%8F%96%E8%BE%93%E5%85%A5%E6%97%B6%E7%9A%84%E8%BF%90%E7%94%A8"><span class="toc-number">2.</span> <span class="toc-text">while循环在获取输入时的运用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#while%E7%9A%84%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE"><span class="toc-number">2.0.1.</span> <span class="toc-text">while的条件表达</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#True-false-break"><span class="toc-number">2.0.2.</span> <span class="toc-text">True     false  break</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#continue-%E8%BF%94%E5%9B%9E%E5%BE%AA%E7%8E%AF%E5%BC%80%E5%A4%B4%EF%BC%8C%E7%BB%A7%E7%BB%AD%E6%89%A7%E8%A1%8C"><span class="toc-number">2.0.3.</span> <span class="toc-text">continue 返回循环开头，继续执行</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#while%E5%BE%AA%E7%8E%AF%E5%9C%A8%E5%88%97%E8%A1%A8%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8"><span class="toc-number">3.</span> <span class="toc-text">while循环在列表中的应用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B%EF%BC%88%E4%B8%80%EF%BC%89%E5%BE%AA%E7%8E%AF%E5%A2%9E%E5%8A%A0"><span class="toc-number">3.0.1.</span> <span class="toc-text">示例（一）循环增加</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B%EF%BC%88%E4%BA%8C%EF%BC%89%E5%BE%AA%E7%8E%AF%E5%88%A0%E9%99%A4"><span class="toc-number">3.0.2.</span> <span class="toc-text">示例（二）循环删除</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E8%BF%87while%E5%BE%AA%E7%8E%AF%E5%A1%AB%E5%85%85%E5%AD%97%E5%85%B8"><span class="toc-number">3.0.3.</span> <span class="toc-text">通过while循环填充字典</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Python基础之获取用户输入
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">千江月</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2022-09-18T15:40:39.000Z" itemprop="datePublished">2022-09-18</time>
+        
+        (Updated: <time datetime="2022-09-20T05:12:32.176Z" itemprop="dateModified">2022-09-20</time>)
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/%E7%A8%8B%E5%BA%8F/">程序</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/for%E5%BE%AA%E7%8E%AF/" rel="tag">for循环</a>, <a class="tag-link-link" href="/tags/pyhon/" rel="tag">pyhon</a>, <a class="tag-link-link" href="/tags/while%E5%BE%AA%E7%8E%AF/" rel="tag">while循环</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><h3 id="需要用户输入非字符串时记得添加函数"><a href="#需要用户输入非字符串时记得添加函数" class="headerlink" title="需要用户输入非字符串时记得添加函数"></a>需要用户输入非字符串时记得添加函数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">name = input(&#x27;你的名字叫什么?: &#x27;)</span><br><span class="line">age = int(input(&#x27;你今年多大了？: &#x27;))        #根据需求，设定名字为整数位</span><br><span class="line">height = float(input(&#x27;你的身高是多少？: &#x27;))      #根据需求，身高可以延申到小数点。</span><br><span class="line"></span><br><span class="line">print(&#x27;你好&#x27;+ name +&#x27; 欢迎光临！&#x27;)</span><br><span class="line">print(&#x27;你的年龄是&#x27;+ str(age)+ &#x27;!&#x27;)</span><br><span class="line">print(&#x27;你的身高是&#x27;+ str(height) + &#x27;!&#x27;)</span><br></pre></td></tr></table></figure>
+<h3 id="增加提示信息"><a href="#增加提示信息" class="headerlink" title="增加提示信息"></a>增加提示信息</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">shuru = &quot;如果你告诉我你是谁，我将给你发信息&quot;</span><br><span class="line">shuru += &quot;\n如果你不告诉我你是谁，就算了！&quot;</span><br><span class="line">shuru += &quot;\n现在在下方输入你的名字吧:\n&quot;</span><br><span class="line">name = input(shuru)</span><br><span class="line">print(&quot;\n你好&quot;+name+&quot;!&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="if语句在获取输入的运用"><a href="#if语句在获取输入的运用" class="headerlink" title="if语句在获取输入的运用"></a>if语句在获取输入的运用</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">number = int(input(&quot;输入一个数字，我能告诉你能不能被2整除:\n&quot;))</span><br><span class="line">if number % 2 == 0:</span><br><span class="line">    print(&quot;你输入的数字能被2整除&quot;)</span><br><span class="line">else:</span><br><span class="line">    print(&quot;你输入的数字不能被2整除&quot;)</span><br></pre></td></tr></table></figure>
+<h1 id="while循环在获取输入时的运用"><a href="#while循环在获取输入时的运用" class="headerlink" title="while循环在获取输入时的运用"></a>while循环在获取输入时的运用</h1><h3 id="while的条件表达"><a href="#while的条件表达" class="headerlink" title="while的条件表达"></a>while的条件表达</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">shuru = &quot;如果你告诉我你是谁，我将给你发信息&quot;</span><br><span class="line">shuru += &quot;\n如果你不告诉我你是谁，就说“是”！&quot;</span><br><span class="line">shuru += &quot;\n现在在下方输入你的名字吧:\n&quot;</span><br><span class="line">name = &quot;&quot;</span><br><span class="line">while name != &quot;是&quot;:</span><br><span class="line">    name = input(shuru)</span><br><span class="line">    if name != &quot;是&quot;:</span><br><span class="line">        print(&quot;\n你好&quot; + name + &quot;!&quot;)</span><br><span class="line">    elif name == &quot;是&quot;:</span><br><span class="line">        print(&quot;再见&quot;)</span><br></pre></td></tr></table></figure>
+<h3 id="True-false-break"><a href="#True-false-break" class="headerlink" title="True     false  break"></a>True     false  break</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">shuru = &quot;如果你告诉我你是谁，我将给你发信息&quot;</span><br><span class="line">shuru += &quot;\n如果你不告诉我你是谁，就说“是”！&quot;</span><br><span class="line">shuru += &quot;\n现在在下方输入你的名字吧:\n&quot;</span><br><span class="line">name = True         #可直接简写成为while True  循环为真会一直循环，到后面跳到break停止。</span><br><span class="line">while name:</span><br><span class="line">    name = input(shuru)</span><br><span class="line">    if name == &quot;是&quot;:</span><br><span class="line">        break           #选项1</span><br><span class="line">       # name = False    #选项2</span><br><span class="line">       # print(&quot;\n你好&quot; + name + &quot;再见!&quot;)       布尔类型的值不能打印</span><br><span class="line">    else:</span><br><span class="line">        print(&quot;\n你好&quot; + name + &quot;!&quot;)</span><br></pre></td></tr></table></figure>
+<h3 id="continue-返回循环开头，继续执行"><a href="#continue-返回循环开头，继续执行" class="headerlink" title="continue 返回循环开头，继续执行"></a>continue 返回循环开头，继续执行</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">number = 0</span><br><span class="line">while number &lt; 10:</span><br><span class="line">    number += 1</span><br><span class="line">    if number % 2 == 0:</span><br><span class="line">        continue</span><br><span class="line">    print(number)</span><br></pre></td></tr></table></figure>
+<h1 id="while循环在列表中的应用"><a href="#while循环在列表中的应用" class="headerlink" title="while循环在列表中的应用"></a>while循环在列表中的应用</h1><h3 id="示例（一）循环增加"><a href="#示例（一）循环增加" class="headerlink" title="示例（一）循环增加"></a>示例（一）循环增加</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">未验证用户 = [&#x27;王二&#x27;,&#x27;狗蛋&#x27;,&#x27;铁锤&#x27;,&#x27;钢镚&#x27;]</span><br><span class="line">验证用户 = []</span><br><span class="line">while 未验证用户:</span><br><span class="line">    待增加用户 =  未验证用户.pop()</span><br><span class="line">    print(&quot;用户增加：&quot;+待增加用户)</span><br><span class="line">    验证用户.append(待增加用户)</span><br><span class="line">print(&quot;\n所有用户验证完毕：&quot;)</span><br><span class="line">for i in 验证用户:</span><br><span class="line">    print(i)</span><br></pre></td></tr></table></figure>
+<h3 id="示例（二）循环删除"><a href="#示例（二）循环删除" class="headerlink" title="示例（二）循环删除"></a>示例（二）循环删除</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">china = [&#x27;安徽&#x27;,&#x27;安徽&#x27;,&#x27;北京&#x27;,&#x27;南京&#x27;,&#x27;上海&#x27;,&#x27;广州&#x27;]</span><br><span class="line">china.pop(5)             #方法一： pop 删除列表值所在的排序</span><br><span class="line">china.remove(&#x27;上海&#x27;)      #方法二： remove 删除列表中包含的值的名称</span><br><span class="line">print(china)</span><br><span class="line">while &#x27;安徽&#x27; in china:    #通过while 删除所有所给值</span><br><span class="line">    china.remove(&#x27;安徽&#x27;)</span><br><span class="line">print(china)</span><br></pre></td></tr></table></figure>
+<h3 id="通过while循环填充字典"><a href="#通过while循环填充字典" class="headerlink" title="通过while循环填充字典"></a>通过while循环填充字典</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">调查 = &#123;&#125;</span><br><span class="line">问题= True</span><br><span class="line">while 问题:</span><br><span class="line">    名字 = input(&quot;\n你的名字叫什么？\n: &quot;)</span><br><span class="line">    爱好 = input(&quot;\n你的爱好是什么？\n: &quot;)</span><br><span class="line">    调查[名字]=爱好           #可以解释为 字典[第几页] = 里面有什么</span><br><span class="line">    询问 = input(&quot;\n还有别的需要回答吗？是或者不\n:&quot;)</span><br><span class="line">    if 询问 == &#x27;不&#x27;:</span><br><span class="line">        问题 = False</span><br><span class="line">for 名字 , 爱好 in 调查.items():</span><br><span class="line">    print(名字 + &quot;你喜欢&quot;+ 爱好</span><br></pre></td></tr></table></figure>
+
+
+
+
+  </div>
+</article>
+
+
+    <div class="blog-post-comments">
+        <div id="utterances_thread">
+            <noscript>加载评论需要在浏览器启用 JavaScript 脚本支持。</noscript>
+        </div>
+    </div>
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/categories/">分类</a></li>
+         
+          <li><a href="/tags/">标签</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/search/">搜索</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B"><span class="toc-number">1.</span> <span class="toc-text">示例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9C%80%E8%A6%81%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5%E9%9D%9E%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%97%B6%E8%AE%B0%E5%BE%97%E6%B7%BB%E5%8A%A0%E5%87%BD%E6%95%B0"><span class="toc-number">1.0.1.</span> <span class="toc-text">需要用户输入非字符串时记得添加函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A2%9E%E5%8A%A0%E6%8F%90%E7%A4%BA%E4%BF%A1%E6%81%AF"><span class="toc-number">1.0.2.</span> <span class="toc-text">增加提示信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#if%E8%AF%AD%E5%8F%A5%E5%9C%A8%E8%8E%B7%E5%8F%96%E8%BE%93%E5%85%A5%E7%9A%84%E8%BF%90%E7%94%A8"><span class="toc-number">1.0.3.</span> <span class="toc-text">if语句在获取输入的运用</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#while%E5%BE%AA%E7%8E%AF%E5%9C%A8%E8%8E%B7%E5%8F%96%E8%BE%93%E5%85%A5%E6%97%B6%E7%9A%84%E8%BF%90%E7%94%A8"><span class="toc-number">2.</span> <span class="toc-text">while循环在获取输入时的运用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#while%E7%9A%84%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE"><span class="toc-number">2.0.1.</span> <span class="toc-text">while的条件表达</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#True-false-break"><span class="toc-number">2.0.2.</span> <span class="toc-text">True     false  break</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#continue-%E8%BF%94%E5%9B%9E%E5%BE%AA%E7%8E%AF%E5%BC%80%E5%A4%B4%EF%BC%8C%E7%BB%A7%E7%BB%AD%E6%89%A7%E8%A1%8C"><span class="toc-number">2.0.3.</span> <span class="toc-text">continue 返回循环开头，继续执行</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#while%E5%BE%AA%E7%8E%AF%E5%9C%A8%E5%88%97%E8%A1%A8%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8"><span class="toc-number">3.</span> <span class="toc-text">while循环在列表中的应用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B%EF%BC%88%E4%B8%80%EF%BC%89%E5%BE%AA%E7%8E%AF%E5%A2%9E%E5%8A%A0"><span class="toc-number">3.0.1.</span> <span class="toc-text">示例（一）循环增加</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B%EF%BC%88%E4%BA%8C%EF%BC%89%E5%BE%AA%E7%8E%AF%E5%88%A0%E9%99%A4"><span class="toc-number">3.0.2.</span> <span class="toc-text">示例（二）循环删除</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E8%BF%87while%E5%BE%AA%E7%8E%AF%E5%A1%AB%E5%85%85%E5%AD%97%E5%85%B8"><span class="toc-number">3.0.3.</span> <span class="toc-text">通过while循环填充字典</span></a></li></ol></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://birkid.github.io/posts/3c13a46e.html"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://birkid.github.io/posts/3c13a46e.html&text=Python基础之获取用户输入"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://birkid.github.io/posts/3c13a46e.html&title=Python基础之获取用户输入"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://birkid.github.io/posts/3c13a46e.html&is_video=false&description=Python基础之获取用户输入"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Python基础之获取用户输入&body=Check out this article: https://birkid.github.io/posts/3c13a46e.html"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://birkid.github.io/posts/3c13a46e.html&title=Python基础之获取用户输入"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://birkid.github.io/posts/3c13a46e.html&title=Python基础之获取用户输入"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://birkid.github.io/posts/3c13a46e.html&title=Python基础之获取用户输入"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://birkid.github.io/posts/3c13a46e.html&title=Python基础之获取用户输入"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://birkid.github.io/posts/3c13a46e.html&name=Python基础之获取用户输入&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://birkid.github.io/posts/3c13a46e.html&t=Python基础之获取用户输入"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    1992-2022
+    千江月
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+    <script type="text/javascript">
+      var utterances_repo = 'owner/githubrepo';
+      var utterances_issue_term = 'pathname';
+      var utterances_label = 'Comment';
+      var utterances_theme = 'github-dark';
+
+      (function(){
+          var script = document.createElement('script');
+
+          script.src = 'https://utteranc.es/client.js';
+          script.setAttribute('repo', utterances_repo);
+          script.setAttribute('issue-term', 'pathname');
+          script.setAttribute('label', utterances_label);
+          script.setAttribute('theme', utterances_theme);
+          script.setAttribute('crossorigin', 'anonymous');
+          script.async = true;
+          (document.getElementById('utterances_thread')).appendChild(script);
+      }());
+  </script>
+
+</body>
+</html>

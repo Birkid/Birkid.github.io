@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Iguacu</title>
+      <link href="/posts/c9cc1d34.html"/>
+      <url>/posts/c9cc1d34.html</url>
+      
+        <content type="html"><![CDATA[<h4 id="比赛前先查看过往战绩，再看最近阶段双方的状态与主客场的状态。接近尾声的比赛，要注意看降级球队与升班马对争夺比分的欲望的程度。"><a href="#比赛前先查看过往战绩，再看最近阶段双方的状态与主客场的状态。接近尾声的比赛，要注意看降级球队与升班马对争夺比分的欲望的程度。" class="headerlink" title="比赛前先查看过往战绩，再看最近阶段双方的状态与主客场的状态。接近尾声的比赛，要注意看降级球队与升班马对争夺比分的欲望的程度。"></a>比赛前先查看过往战绩，再看最近阶段双方的状态与主客场的状态。接近尾声的比赛，要注意看降级球队与升班马对争夺比分的欲望的程度。</h4><h1 id="平手盘"><a href="#平手盘" class="headerlink" title="平手盘"></a>平手盘</h1><h3 id="平手高低水"><a href="#平手高低水" class="headerlink" title="平手高低水"></a>平手高低水</h3><p>​    1：超低水有操盘的空间，看上下盘对战往绩与近期状态再做判断。</p><p>​    2：超低水转平半高水，期间不升临场升的情况下要仔细分辨是诱盘还是降水，期间多次升降转换放弃。</p><p>​    3：一般来说，平手低水方并不容易获胜。双方实力均衡，占据主场优势才给出低水，先看平，再斟酌。</p><p>​    4：低水转平半高水，期间不升临场升的情况降水的可能性稍大一些，期间多次升降，首看平。</p><h3 id="平手平水"><a href="#平手平水" class="headerlink" title="平手平水"></a>平手平水</h3><p>​    1：胜负平皆有可能，走水盘，先考虑平，再看近期状态抉择。</p><h1 id="平半盘"><a href="#平半盘" class="headerlink" title="平半盘"></a>平半盘</h1><h3 id="平半高低水"><a href="#平半高低水" class="headerlink" title="平半高低水"></a>平半高低水</h3><p>​    1：平半高水先看上盘，高水升超高水，分辨是阻盘还是诱盘</p><p>​    2：平半低水看下盘，超低水不变看上盘胜，超低水升半球高水，先看平，再看上盘。</p><h3 id="平半平水"><a href="#平半平水" class="headerlink" title="平半平水"></a>平半平水</h3><p>​    1：先看下盘，再看上盘。</p><h1 id="半球盘"><a href="#半球盘" class="headerlink" title="半球盘"></a>半球盘</h1><h3 id="半球低水"><a href="#半球低水" class="headerlink" title="半球低水"></a>半球低水</h3><h3 id="半球平水"><a href="#半球平水" class="headerlink" title="半球平水"></a>半球平水</h3><h3 id="半球高水"><a href="#半球高水" class="headerlink" title="半球高水"></a>半球高水</h3><h1 id="半一球盘"><a href="#半一球盘" class="headerlink" title="半一球盘"></a>半一球盘</h1><h3 id="半一低水"><a href="#半一低水" class="headerlink" title="半一低水"></a>半一低水</h3><h3 id="半一平水"><a href="#半一平水" class="headerlink" title="半一平水"></a>半一平水</h3><h3 id="半一高水"><a href="#半一高水" class="headerlink" title="半一高水"></a>半一高水</h3><h1 id="大球盘"><a href="#大球盘" class="headerlink" title="大球盘"></a>大球盘</h1><h3 id="让二让三的选择"><a href="#让二让三的选择" class="headerlink" title="让二让三的选择"></a>让二让三的选择</h3>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 亚盘 </tag>
+            
+            <tag> 欧盘 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python基础之获取用户输入</title>
+      <link href="/posts/3c13a46e.html"/>
+      <url>/posts/3c13a46e.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><h3 id="需要用户输入非字符串时记得添加函数"><a href="#需要用户输入非字符串时记得添加函数" class="headerlink" title="需要用户输入非字符串时记得添加函数"></a>需要用户输入非字符串时记得添加函数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">name = input(&#x27;你的名字叫什么?: &#x27;)</span><br><span class="line">age = int(input(&#x27;你今年多大了？: &#x27;))        #根据需求，设定名字为整数位</span><br><span class="line">height = float(input(&#x27;你的身高是多少？: &#x27;))      #根据需求，身高可以延申到小数点。</span><br><span class="line"></span><br><span class="line">print(&#x27;你好&#x27;+ name +&#x27; 欢迎光临！&#x27;)</span><br><span class="line">print(&#x27;你的年龄是&#x27;+ str(age)+ &#x27;!&#x27;)</span><br><span class="line">print(&#x27;你的身高是&#x27;+ str(height) + &#x27;!&#x27;)</span><br></pre></td></tr></table></figure><h3 id="增加提示信息"><a href="#增加提示信息" class="headerlink" title="增加提示信息"></a>增加提示信息</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">shuru = &quot;如果你告诉我你是谁，我将给你发信息&quot;</span><br><span class="line">shuru += &quot;\n如果你不告诉我你是谁，就算了！&quot;</span><br><span class="line">shuru += &quot;\n现在在下方输入你的名字吧:\n&quot;</span><br><span class="line">name = input(shuru)</span><br><span class="line">print(&quot;\n你好&quot;+name+&quot;!&quot;</span><br></pre></td></tr></table></figure><h3 id="if语句在获取输入的运用"><a href="#if语句在获取输入的运用" class="headerlink" title="if语句在获取输入的运用"></a>if语句在获取输入的运用</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">number = int(input(&quot;输入一个数字，我能告诉你能不能被2整除:\n&quot;))</span><br><span class="line">if number % 2 == 0:</span><br><span class="line">    print(&quot;你输入的数字能被2整除&quot;)</span><br><span class="line">else:</span><br><span class="line">    print(&quot;你输入的数字不能被2整除&quot;)</span><br></pre></td></tr></table></figure><h1 id="while循环在获取输入时的运用"><a href="#while循环在获取输入时的运用" class="headerlink" title="while循环在获取输入时的运用"></a>while循环在获取输入时的运用</h1><h3 id="while的条件表达"><a href="#while的条件表达" class="headerlink" title="while的条件表达"></a>while的条件表达</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">shuru = &quot;如果你告诉我你是谁，我将给你发信息&quot;</span><br><span class="line">shuru += &quot;\n如果你不告诉我你是谁，就说“是”！&quot;</span><br><span class="line">shuru += &quot;\n现在在下方输入你的名字吧:\n&quot;</span><br><span class="line">name = &quot;&quot;</span><br><span class="line">while name != &quot;是&quot;:</span><br><span class="line">    name = input(shuru)</span><br><span class="line">    if name != &quot;是&quot;:</span><br><span class="line">        print(&quot;\n你好&quot; + name + &quot;!&quot;)</span><br><span class="line">    elif name == &quot;是&quot;:</span><br><span class="line">        print(&quot;再见&quot;)</span><br></pre></td></tr></table></figure><h3 id="True-false-break"><a href="#True-false-break" class="headerlink" title="True     false  break"></a>True     false  break</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">shuru = &quot;如果你告诉我你是谁，我将给你发信息&quot;</span><br><span class="line">shuru += &quot;\n如果你不告诉我你是谁，就说“是”！&quot;</span><br><span class="line">shuru += &quot;\n现在在下方输入你的名字吧:\n&quot;</span><br><span class="line">name = True         #可直接简写成为while True  循环为真会一直循环，到后面跳到break停止。</span><br><span class="line">while name:</span><br><span class="line">    name = input(shuru)</span><br><span class="line">    if name == &quot;是&quot;:</span><br><span class="line">        break           #选项1</span><br><span class="line">       # name = False    #选项2</span><br><span class="line">       # print(&quot;\n你好&quot; + name + &quot;再见!&quot;)       布尔类型的值不能打印</span><br><span class="line">    else:</span><br><span class="line">        print(&quot;\n你好&quot; + name + &quot;!&quot;)</span><br></pre></td></tr></table></figure><h3 id="continue-返回循环开头，继续执行"><a href="#continue-返回循环开头，继续执行" class="headerlink" title="continue 返回循环开头，继续执行"></a>continue 返回循环开头，继续执行</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">number = 0</span><br><span class="line">while number &lt; 10:</span><br><span class="line">    number += 1</span><br><span class="line">    if number % 2 == 0:</span><br><span class="line">        continue</span><br><span class="line">    print(number)</span><br></pre></td></tr></table></figure><h1 id="while循环在列表中的应用"><a href="#while循环在列表中的应用" class="headerlink" title="while循环在列表中的应用"></a>while循环在列表中的应用</h1><h3 id="示例（一）循环增加"><a href="#示例（一）循环增加" class="headerlink" title="示例（一）循环增加"></a>示例（一）循环增加</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">未验证用户 = [&#x27;王二&#x27;,&#x27;狗蛋&#x27;,&#x27;铁锤&#x27;,&#x27;钢镚&#x27;]</span><br><span class="line">验证用户 = []</span><br><span class="line">while 未验证用户:</span><br><span class="line">    待增加用户 =  未验证用户.pop()</span><br><span class="line">    print(&quot;用户增加：&quot;+待增加用户)</span><br><span class="line">    验证用户.append(待增加用户)</span><br><span class="line">print(&quot;\n所有用户验证完毕：&quot;)</span><br><span class="line">for i in 验证用户:</span><br><span class="line">    print(i)</span><br></pre></td></tr></table></figure><h3 id="示例（二）循环删除"><a href="#示例（二）循环删除" class="headerlink" title="示例（二）循环删除"></a>示例（二）循环删除</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">china = [&#x27;安徽&#x27;,&#x27;安徽&#x27;,&#x27;北京&#x27;,&#x27;南京&#x27;,&#x27;上海&#x27;,&#x27;广州&#x27;]</span><br><span class="line">china.pop(5)             #方法一： pop 删除列表值所在的排序</span><br><span class="line">china.remove(&#x27;上海&#x27;)      #方法二： remove 删除列表中包含的值的名称</span><br><span class="line">print(china)</span><br><span class="line">while &#x27;安徽&#x27; in china:    #通过while 删除所有所给值</span><br><span class="line">    china.remove(&#x27;安徽&#x27;)</span><br><span class="line">print(china)</span><br></pre></td></tr></table></figure><h3 id="通过while循环填充字典"><a href="#通过while循环填充字典" class="headerlink" title="通过while循环填充字典"></a>通过while循环填充字典</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">调查 = &#123;&#125;</span><br><span class="line">问题= True</span><br><span class="line">while 问题:</span><br><span class="line">    名字 = input(&quot;\n你的名字叫什么？\n: &quot;)</span><br><span class="line">    爱好 = input(&quot;\n你的爱好是什么？\n: &quot;)</span><br><span class="line">    调查[名字]=爱好           #可以解释为 字典[第几页] = 里面有什么</span><br><span class="line">    询问 = input(&quot;\n还有别的需要回答吗？是或者不\n:&quot;)</span><br><span class="line">    if 询问 == &#x27;不&#x27;:</span><br><span class="line">        问题 = False</span><br><span class="line">for 名字 , 爱好 in 调查.items():</span><br><span class="line">    print(名字 + &quot;你喜欢&quot;+ 爱好</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 程序 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> pyhon </tag>
+            
+            <tag> while循环 </tag>
+            
+            <tag> for循环 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python基础之字典</title>
+      <link href="/posts/198753ed.html"/>
+      <url>/posts/198753ed.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>字典是一系列键和值的相对应，每个键都和一个值相关联，可以通过键访问值<br>值可以是数字、字符串、列表 、字典。</p><h3 id="示例（一"><a href="#示例（一" class="headerlink" title="示例（一)"></a>示例（一)</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">一周活动安排 = &#123;&#x27;周一&#x27;:&#x27;上课&#x27;,&#x27;周二&#x27;:&#x27;打游戏&#x27;,&#x27;周三&#x27;:3&#125;</span><br><span class="line">今天去干嘛 = 一周活动安排[&#x27;周二&#x27;]</span><br><span class="line">print(&quot;你今天应该去&quot;+str(今天去干嘛))</span><br></pre></td></tr></table></figure><h3 id="示例（二）将花括号回车再填写键值，便于浏览"><a href="#示例（二）将花括号回车再填写键值，便于浏览" class="headerlink" title="示例（二）将花括号回车再填写键值，便于浏览"></a>示例（二）将花括号回车再填写键值，便于浏览</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">一周活动安排 = &#123;</span><br><span class="line">    &#x27;周一&#x27; : &#x27;上课&#x27;,</span><br><span class="line">    &#x27;周二&#x27; : &#x27;打游戏&#x27;,</span><br><span class="line">    &#x27;周三&#x27; : &#x27;3&#x27;</span><br><span class="line">&#125;</span><br><span class="line">今天去干嘛 = 一周活动安排[&#x27;周二&#x27;]</span><br><span class="line">print(&quot;你今天应该去&quot;+str(今天去干嘛))</span><br></pre></td></tr></table></figure><h3 id="创建空字典（增添方便）"><a href="#创建空字典（增添方便）" class="headerlink" title="创建空字典（增添方便）"></a>创建空字典（增添方便）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">食谱 = &#123;&#125;</span><br><span class="line">食谱[&#x27;鸡蛋羹&#x27;] = &#x27;egg&#x27;</span><br><span class="line">食谱[&#x27;土豆泥&#x27;] = &#x27;土豆&#x27;</span><br><span class="line">食谱[&#x27;红烧鸡块&#x27;] = &#x27;鸡肉&#x27;</span><br><span class="line">print(食谱)</span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="修改字典中的值"><a href="#修改字典中的值" class="headerlink" title="修改字典中的值"></a>修改字典中的值</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">食谱 = &#123;&#125;</span><br><span class="line">食谱[&#x27;鸡蛋羹&#x27;] = &#x27;egg&#x27;</span><br><span class="line">食谱[&#x27;土豆泥&#x27;] = &#x27;土豆&#x27;</span><br><span class="line">食谱[&#x27;红烧鸡块&#x27;] = &#x27;鸡肉&#x27;</span><br><span class="line">print(食谱)</span><br><span class="line">食谱[&#x27;鸡蛋羹&#x27;] = &#x27;鸡蛋&#x27;</span><br><span class="line">print(食谱)</span><br></pre></td></tr></table></figure><h3 id="增加键和值"><a href="#增加键和值" class="headerlink" title="__增加键和值"></a>__增加键和值</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">食谱 = &#123;&#125;</span><br><span class="line">食谱[&#x27;鸡蛋羹&#x27;] = &#x27;egg&#x27;</span><br><span class="line">食谱[&#x27;土豆泥&#x27;] = &#x27;土豆&#x27;</span><br><span class="line">食谱[&#x27;红烧鸡块&#x27;] = &#x27;鸡肉&#x27;</span><br><span class="line">print(食谱)</span><br><span class="line">食谱[&#x27;酸菜鱼&#x27;] = &#x27;鱼&#x27;</span><br><span class="line">print(食谱)</span><br></pre></td></tr></table></figure><h3 id="删除键值（del语句）"><a href="#删除键值（del语句）" class="headerlink" title="__删除键值（del语句）"></a>__删除键值（del语句）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">食谱 = &#123;&#125;</span><br><span class="line">食谱[&#x27;鸡蛋羹&#x27;] = &#x27;egg&#x27;</span><br><span class="line">食谱[&#x27;土豆泥&#x27;] = &#x27;土豆&#x27;</span><br><span class="line">食谱[&#x27;红烧鸡块&#x27;] = &#x27;鸡肉&#x27;</span><br><span class="line">print(食谱)</span><br><span class="line">del 食谱[&#x27;鸡蛋羹&#x27;]</span><br><span class="line">print(食谱)</span><br></pre></td></tr></table></figure><h3 id="遍历（浏览）字典-for循环遍历与-items-keys-values-用法"><a href="#遍历（浏览）字典-for循环遍历与-items-keys-values-用法" class="headerlink" title="__遍历（浏览）字典  ,for循环遍历与 items  keys  values 用法"></a>__遍历（浏览）字典  ,for循环遍历与 items  keys  values 用法</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">食谱 = &#123;&#125;</span><br><span class="line">食谱[&#x27;鸡蛋羹&#x27;] = &#x27;egg&#x27;</span><br><span class="line">食谱[&#x27;土豆泥&#x27;] = &#x27;土豆&#x27;</span><br><span class="line">食谱[&#x27;红烧鸡块&#x27;] = &#x27;鸡肉&#x27;</span><br><span class="line">print(食谱)</span><br><span class="line">#遍历键和值</span><br><span class="line">for key, value in 食谱.items():    #key和value可替换成其他字符，重要的是与之相对应</span><br><span class="line">    print(&quot;\n食物是&quot;+ key)</span><br><span class="line">    print(&quot;食材是&quot;+ value)</span><br><span class="line">##遍历值，if与if not 用法</span><br><span class="line">for 食物 in 食谱.keys():</span><br><span class="line">    print(食物)</span><br><span class="line">if &#x27;鸡蛋羹&#x27; in 食谱.keys():          #键是唯一的需要调用</span><br><span class="line">    print(&#x27;我们今天吃鸡蛋羹吧！&#x27;)</span><br><span class="line">print(&quot;_____分割线______&quot;)</span><br><span class="line">for 食材 in 食谱.values():</span><br><span class="line">    print(食材)</span><br><span class="line">if &#x27;猪肉&#x27; not  in 食材:</span><br><span class="line">    print(&#x27;今天吃不上猪肉了&#x27;)</span><br></pre></td></tr></table></figure><h3 id="遍历字典进行排序和剔除重复"><a href="#遍历字典进行排序和剔除重复" class="headerlink" title="__遍历字典进行排序和剔除重复"></a>__遍历字典进行排序和剔除重复</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">china = &#123;</span><br><span class="line">    &#x27;a&#x27;:&#x27;anhui&#x27;,</span><br><span class="line">    &#x27;s&#x27;:&#x27;shanghai&#x27;,</span><br><span class="line">    &#x27;b&#x27;:&#x27;beijing&#x27;,</span><br><span class="line">    &#x27;x&#x27;:&#x27;xian&#x27;,</span><br><span class="line">    &#x27;A&#x27;:&#x27;anhui&#x27;</span><br><span class="line">&#125;</span><br><span class="line">for name in sorted(china.keys()):</span><br><span class="line">    print(name + &quot;重新排序了&quot;)</span><br><span class="line">for name1 in set(china.values()):</span><br><span class="line">    print(name1 + &quot;去除重复了&quot;)</span><br></pre></td></tr></table></figure><h1 id="嵌套-列表嵌套字典，字典嵌套列表，字典嵌套字典"><a href="#嵌套-列表嵌套字典，字典嵌套列表，字典嵌套字典" class="headerlink" title="__嵌套     列表嵌套字典，字典嵌套列表，字典嵌套字典"></a>__嵌套     列表嵌套字典，字典嵌套列表，字典嵌套字典</h1><h3 id="列表嵌套字典"><a href="#列表嵌套字典" class="headerlink" title="列表嵌套字典"></a>列表嵌套字典</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">zidian1 = &#123;&#x27;安徽&#x27;:&#x27;合肥&#x27;&#125;</span><br><span class="line">zidian2 = &#123;&#x27;湖北&#x27;:&#x27;武汉&#x27;&#125;</span><br><span class="line">zidian3 = &#123;&#x27;四川&#x27;:&#x27;重庆&#x27;&#125;</span><br><span class="line">libiao = [zidian1,zidian2,zidian3]</span><br><span class="line">for x in libiao:</span><br><span class="line">    print(x)</span><br></pre></td></tr></table></figure><h3 id="循环字典修改字典参数"><a href="#循环字典修改字典参数" class="headerlink" title="循环字典修改字典参数"></a>循环字典修改字典参数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">china = []</span><br><span class="line">for y in range(5):</span><br><span class="line">    zidian = &#123;&#x27;安徽&#x27;:&#x27;合肥&#x27;,&#x27;首都&#x27;:&#x27;北京&#x27;,&#x27;年份&#x27;:2022&#125;</span><br><span class="line">    china.append(zidian)</span><br><span class="line">for z in china[0:2]:</span><br><span class="line">    if z[&#x27;安徽&#x27;] == &#x27;合肥&#x27;:</span><br><span class="line">        z[&#x27;安徽&#x27;] = &#x27;亳州&#x27;</span><br><span class="line">        z[&#x27;年份&#x27;] = 2345</span><br><span class="line">    print(z)</span><br><span class="line">print(china)</span><br></pre></td></tr></table></figure><h3 id="字典嵌套列表"><a href="#字典嵌套列表" class="headerlink" title="字典嵌套列表"></a>字典嵌套列表</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">china = &#123;</span><br><span class="line">    &#x27;首都&#x27;:&#x27;北京&#x27;,</span><br><span class="line">    &#x27;省份&#x27;:[&#x27;安徽&#x27;,&#x27;湖南&#x27;,&#x27;湖北&#x27;,&#x27;广东&#x27;],</span><br><span class="line">    &#x27;直辖市&#x27;:[&#x27;上海&#x27;,&#x27;深圳&#x27;,&#x27;重庆&#x27;]</span><br><span class="line">&#125;</span><br><span class="line">print(&quot;中国的首都是&quot;+china[&#x27;首都&#x27;])</span><br><span class="line">for i in china[&#x27;省份&#x27;]:</span><br><span class="line">    print(&#x27;中国的省会含有&#x27;+&#x27;\t&#x27;+ i)</span><br></pre></td></tr></table></figure><h3 id="字典嵌套字典"><a href="#字典嵌套字典" class="headerlink" title="字典嵌套字典"></a>字典嵌套字典</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">china = &#123;</span><br><span class="line">    &#x27;安徽&#x27;: &#123;</span><br><span class="line">        &#x27;省会&#x27;:&#x27;合肥&#x27;,</span><br><span class="line">        &#x27;地级市&#x27;:[&#x27;阜阳&#x27;,&#x27;亳州&#x27;,&#x27;黄山&#x27;]</span><br><span class="line">    &#125;,</span><br><span class="line">    &#x27;湖南&#x27;:&#123;</span><br><span class="line">        &#x27;省会&#x27;:&#x27;长沙&#x27;,</span><br><span class="line">        &#x27;地级市&#x27;:[&#x27;张家界&#x27;,&#x27;绥德&#x27;]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">for k , v in china.items():</span><br><span class="line">    print(&quot;省有&quot;+ k)</span><br><span class="line">    w = v[&#x27;省会&#x27;]</span><br><span class="line">    for i in v[&#x27;地级市&#x27;]:</span><br><span class="line">        print(i)</span><br><span class="line">    print(w)</span><br></pre></td></tr></table></figure><h3 id=""><a href="#" class="headerlink" title=""></a></h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> 程序 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> pyhon </tag>
+            
+            <tag> 字典 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>影音类网站推荐</title>
+      <link href="/posts/3497fe02.html"/>
+      <url>/posts/3497fe02.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><h3 id="电影推荐"><a href="#电影推荐" class="headerlink" title="电影推荐"></a>电影推荐</h3><p>(<a href="https://www.mvcat.com/">https://www.mvcat.com/</a>)</p><h3 id="电影网站"><a href="#电影网站" class="headerlink" title="电影网站"></a>电影网站</h3><p>影视森林（<a href="http://www.549.tv/%EF%BC%89">http://www.549.tv/）</a><br>Libvio（<a href="https://www.libvio.fun)/">https://www.libvio.fun）</a><br>美剧 (<a href="https://uniquestream.net/">https://uniquestream.net/</a>)</p><h3 id="音乐相关"><a href="#音乐相关" class="headerlink" title="音乐相关"></a>音乐相关</h3><p>音乐磁场（<a href="https://www.hifini.com/%EF%BC%89">https://www.hifini.com/）</a><br>YOUTUBE(<a href="https://music.youtube.com/">https://music.youtube.com/</a>)<br>在线听(<a href="http://music.alang.run/#/">http://music.alang.run/#/</a>)<br>音乐课(<a href="https://www.yinyueke.net/">https://www.yinyueke.net/</a>)</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 影音 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 美剧 </tag>
+            
+            <tag> 音乐 </tag>
+            
+            <tag> 电子书 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>五大联赛数据</title>
+      <link href="/posts/e86cd9bb.html"/>
+      <url>/posts/e86cd9bb.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><h3 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h3><p>球探<br>(<a href="http://jc.titan007.com/index.aspx">http://jc.titan007.com/index.aspx</a>)<br>五百<br>(<a href="https://live.500.com/">https://live.500.com/</a>)<br>澳门<br>(<a href="https://www.macauslot.com/fjt/content/page/soccer/odds/all.html?sport=1&amp;lang=sc">https://www.macauslot.com/fjt/content/page/soccer/odds/all.html?sport=1&amp;lang=sc</a>)</p><h3 id="直播"><a href="#直播" class="headerlink" title="直播"></a>直播</h3><p>直播①(<a href="https://www.yoozhibo.com/zuqiu/">https://www.yoozhibo.com/zuqiu/</a>)<br>直播②(<a href="http://www.qiuquzhibo.com/zuqiu/">http://www.qiuquzhibo.com/zuqiu/</a>)<br>直播③(<a href="https://www.aiscore.com/zht">https://www.aiscore.com/zht</a>)<br>直播④(<a href="http://www.uusnba.com/">http://www.uusnba.com/</a>)</p><h3 id="官方直播间"><a href="#官方直播间" class="headerlink" title="官方直播间"></a>官方直播间</h3><p>爱奇艺(<a href="https://sports.iqiyi.com/">https://sports.iqiyi.com/</a>)<br>咪咕视频(<a href="https://www.miguvideo.com/mgs/website/prd/sportsHomePage.html">https://www.miguvideo.com/mgs/website/prd/sportsHomePage.html</a>)<br>CCTV5(<a href="https://tv.cctv.com/live/cctv5/?spm=C28340.PANm9ivhQsG1.ExidtyEJcS5K.5">https://tv.cctv.com/live/cctv5/?spm=C28340.PANm9ivhQsG1.ExidtyEJcS5K.5</a>)</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 足球 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 英超 </tag>
+            
+            <tag> 亚盘 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>程序类网站推荐</title>
+      <link href="/posts/c302e378.html"/>
+      <url>/posts/c302e378.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><h3 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h3><p>博客园(<a href="https://www.cnblogs.com/">https://www.cnblogs.com/</a>)<br>菜鸟教程(<a href="https://www.runoob.com/python3/python3-tutorial.html">https://www.runoob.com/python3/python3-tutorial.html</a>)<br>Stackoverflow(<a href="https://stackoverflow.com/">https://stackoverflow.com/</a>)<br>Hello Github(<a href="https://hellogithub.com/">https://hellogithub.com/</a>)<br>Github(<a href="https://github.com/">https://github.com/</a>)</p><h3 id="刷题"><a href="#刷题" class="headerlink" title="刷题"></a>刷题</h3><p>Freecode(<a href="https://chinese.freecodecamp.org/learn">https://chinese.freecodecamp.org/learn</a>)</p><h3 id="破解类"><a href="#破解类" class="headerlink" title="破解类"></a>破解类</h3><p>吾爱(<a href="http://www.52pojie.cn/">http://www.52pojie.cn/</a>)<br>小众软件(<a href="https://meta.appinn.net/">https://meta.appinn.net/</a>)<br>风音应用(<a href="https://www.fy6b.com/">https://www.fy6b.com/</a>)<br>果核(<a href="https://www.ghxi.com/">https://www.ghxi.com/</a>)</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 程序 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> pyhon </tag>
+            
+            <tag> java </tag>
+            
+            <tag> c++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>学习类网站推荐</title>
+      <link href="/posts/38fe2513.html"/>
+      <url>/posts/38fe2513.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><h3 id="公开课"><a href="#公开课" class="headerlink" title="公开课"></a>公开课</h3><p>网易公开课(<a href="http://open.163.com/">http://open.163.com/</a>)<br>慕课(<a href="http://www.icourse163.org/">http://www.icourse163.org/</a>)<br>国图(<a href="http://open.nlc.cn/onlineedu/client/index.htm">http://open.nlc.cn/onlineedu/client/index.htm</a>)<br>TED(<a href="http://www.ted.com/">http://www.ted.com/</a>)</p><h3 id="资源网"><a href="#资源网" class="headerlink" title="资源网"></a>资源网</h3><p>大学生资源网(<a href="http://www.dxzy163.com/">http://www.dxzy163.com/</a>)<br>我要自学网(<a href="https://www.51zxw.net/">https://www.51zxw.net/</a>)<br>大学生自学网(<a href="http://v.dxsbb.com/">http://v.dxsbb.com/</a>)<br>语文迷(<a href="http://www.yuwenmi.com/">http://www.yuwenmi.com/</a>)</p><h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>全历史(<a href="https://www.allhistory.com/">https://www.allhistory.com/</a>)<br>古诗文(<a href="https://www.gushiwen.org/">https://www.gushiwen.org/</a>)<br>百度汉语(<a href="http://hanyu.baidu.com/">http://hanyu.baidu.com/</a>)<br>知网(<a href="http://www.cnki.net/">http://www.cnki.net/</a>)<br>昆虫(<a href="http://microsculpture.net/treehopper.html">http://microsculpture.net/treehopper.html</a>)<br>英语学习(<a href="https://www.languageguide.org/">https://www.languageguide.org/</a>)</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 历史 </tag>
+            
+            <tag> 哲学 </tag>
+            
+            <tag> 心理学 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
