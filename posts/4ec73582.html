@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="面向对象编程创建与使用示例​    解读：首先创建一个名叫”小狗“的类，随后定义两个形参name与age。下面定义了两个函数sit与stand，让后期可以随时去调用 123456789101112131415161718# class 小狗():#     &quot;模拟尝试&quot;#     def __init__(self,name ,age):#         &quot;初始化名">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python基础之Class（类）">
+<meta property="og:url" content="https://birkid.github.io/posts/4ec73582.html">
+<meta property="og:site_name" content="静竹轩">
+<meta property="og:description" content="面向对象编程创建与使用示例​    解读：首先创建一个名叫”小狗“的类，随后定义两个形参name与age。下面定义了两个函数sit与stand，让后期可以随时去调用 123456789101112131415161718# class 小狗():#     &quot;模拟尝试&quot;#     def __init__(self,name ,age):#         &quot;初始化名">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-09-22T09:12:28.000Z">
+<meta property="article:modified_time" content="2022-09-22T10:37:29.206Z">
+<meta property="article:author" content="千江月">
+<meta property="article:tag" content="pyhon">
+<meta property="article:tag" content="class">
+<meta property="article:tag" content="继承">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Python基础之Class（类）</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/posts/ab79ac4e.html"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://birkid.github.io/posts/4ec73582.html"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://birkid.github.io/posts/4ec73582.html&text=Python基础之Class（类）"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://birkid.github.io/posts/4ec73582.html&title=Python基础之Class（类）"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://birkid.github.io/posts/4ec73582.html&is_video=false&description=Python基础之Class（类）"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Python基础之Class（类）&body=Check out this article: https://birkid.github.io/posts/4ec73582.html"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://birkid.github.io/posts/4ec73582.html&title=Python基础之Class（类）"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://birkid.github.io/posts/4ec73582.html&title=Python基础之Class（类）"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://birkid.github.io/posts/4ec73582.html&title=Python基础之Class（类）"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://birkid.github.io/posts/4ec73582.html&title=Python基础之Class（类）"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://birkid.github.io/posts/4ec73582.html&name=Python基础之Class（类）&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://birkid.github.io/posts/4ec73582.html&t=Python基础之Class（类）"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">面向对象编程</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%8E%E4%BD%BF%E7%94%A8"><span class="toc-number"></span> <span class="toc-text">创建与使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B"><span class="toc-number"></span> <span class="toc-text">示例</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%B1%BB%E7%9A%84%E7%94%A8%E6%B3%95"><span class="toc-number"></span> <span class="toc-text">类的用法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E7%B1%BB%E4%B8%AD%E6%96%B0%E5%A2%9E%E5%87%BD%E6%95%B0"><span class="toc-number"></span> <span class="toc-text">在类中新增函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%A7%E6%89%BF%E7%B1%BB"><span class="toc-number"></span> <span class="toc-text">继承类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%A2%9E%E4%B8%80%E4%B8%AA%E7%B1%BB%EF%BC%8C%E6%8F%90%E4%BE%9B%E8%B0%83%E7%94%A8"><span class="toc-number"></span> <span class="toc-text">新增一个类，提供调用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%88%B6%E7%B1%BB"><span class="toc-number">1.</span> <span class="toc-text">父类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B0%E5%A2%9E%E7%B1%BB"><span class="toc-number">2.</span> <span class="toc-text">新增类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%90%E7%B1%BB"><span class="toc-number">3.</span> <span class="toc-text">子类</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Python基础之Class（类）
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">千江月</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2022-09-22T09:12:28.000Z" itemprop="datePublished">2022-09-22</time>
+        
+        (Updated: <time datetime="2022-09-22T10:37:29.206Z" itemprop="dateModified">2022-09-22</time>)
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/%E7%A8%8B%E5%BA%8F/">程序</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/class/" rel="tag">class</a>, <a class="tag-link-link" href="/tags/pyhon/" rel="tag">pyhon</a>, <a class="tag-link-link" href="/tags/%E7%BB%A7%E6%89%BF/" rel="tag">继承</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h4 id="面向对象编程"><a href="#面向对象编程" class="headerlink" title="面向对象编程"></a>面向对象编程</h4><h1 id="创建与使用"><a href="#创建与使用" class="headerlink" title="创建与使用"></a>创建与使用</h1><h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p>​    解读：首先创建一个名叫”小狗“的类，随后定义两个形参name与age。下面定义了两个函数sit与stand，让后期可以随时去调用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"># class 小狗():</span><br><span class="line">#     &quot;模拟尝试&quot;</span><br><span class="line">#     def __init__(self,name ,age):</span><br><span class="line">#         &quot;初始化名字和年龄&quot;</span><br><span class="line">#         self.name = name</span><br><span class="line">#         self.age = age</span><br><span class="line">#     def sit(self):                  #创建一个蹲下函数</span><br><span class="line">#         print(self.name + &quot;蹲下&quot;)</span><br><span class="line">#     def stand(self):                #创建一个站起来函数</span><br><span class="line">#         print(self.name + &quot;站起来&quot;)</span><br><span class="line">#</span><br><span class="line"># dog = 小狗(&#x27;旺财&#x27;,6)</span><br><span class="line"># dog2 = 小狗(&#x27;笨笨&#x27;,7)</span><br><span class="line"># print(&quot;我的小狗叫&quot;+ dog.name + &quot;。它今年&quot;+ str(dog.age)+&quot;岁了&quot;)</span><br><span class="line"># print(&quot;还有一条叫&quot;+ dog2.name + &quot;。它今年&quot;+ str(dog2.age)+&quot;岁了&quot;)</span><br><span class="line"># dog.sit()</span><br><span class="line"># dog2.sit()</span><br><span class="line"># dog.stand()</span><br></pre></td></tr></table></figure>
+
+<h1 id="类的用法"><a href="#类的用法" class="headerlink" title="类的用法"></a>类的用法</h1><h3 id="在类中新增函数"><a href="#在类中新增函数" class="headerlink" title="在类中新增函数"></a>在类中新增函数</h3><p>​    解读：首先定义了一个类的名称”诛仙“，其中包含几种形参。随后定义一个名叫”角色“的函数，函数内包含了可供直接调用的信息。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class 诛仙():</span><br><span class="line">    def __init__(self,门派,武器,坐骑,技能):</span><br><span class="line">        self.门派 = 门派</span><br><span class="line">        self.武器 = 武器</span><br><span class="line">        self.坐骑 = 坐骑</span><br><span class="line">        self.技能 = 技能</span><br><span class="line">    def 角色(self):</span><br><span class="line">        角色信息 = self.门派 + self.坐骑 + self.武器 + self.技能</span><br><span class="line">        print(&quot;创建角色成功.&quot;+ &quot;\n你的人物门派是:&quot;+self.门派+&quot;\n坐骑是：&quot;+</span><br><span class="line">              self.坐骑+&quot;\n武器是:&quot;+self.武器+&quot;\n技能是:&quot;+self.技能)</span><br><span class="line">        return 角色信息</span><br><span class="line">a = 诛仙(&quot;青云&quot;,&quot;剑&quot;,&quot;马&quot;,&quot;御剑诀&quot;)</span><br><span class="line">print(a.角色())</span><br></pre></td></tr></table></figure>
+
+<p>​    解读：新增一个形参”速度“并给予赋值，随后新增一个名叫“人物速度”的函数，把新增的形参用到。并在底下修改了形参的值并调用了这个函数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class 诛仙():</span><br><span class="line">    def __init__(self,门派,武器,坐骑,技能):</span><br><span class="line">        self.门派 = 门派</span><br><span class="line">        self.武器 = 武器</span><br><span class="line">        self.坐骑 = 坐骑</span><br><span class="line">        self.技能 = 技能</span><br><span class="line">        self.速度= 0          #新增形参并赋值</span><br><span class="line">    def 角色(self):</span><br><span class="line">        角色信息 = self.门派 + self.坐骑 + self.武器 + self.技能</span><br><span class="line">        print(&quot;创建角色成功.&quot;+ &quot;\n你的人物门派是:&quot;+self.门派+&quot;\n坐骑是：&quot;+</span><br><span class="line">              self.坐骑+&quot;\n武器是:&quot;+self.武器+&quot;\n技能是:&quot;+self.技能)</span><br><span class="line">        return 角色信息</span><br><span class="line">    def 人物速度(self):                         </span><br><span class="line">        print(&quot;人物移动速度是:&quot;+ str(self.速度))</span><br><span class="line">a = 诛仙(&quot;青云&quot;,&quot;剑&quot;,&quot;马&quot;,&quot;御剑诀&quot;)</span><br><span class="line">print(a.角色())</span><br><span class="line">a.速度 = 44                   #直接修改值</span><br><span class="line">a.人物速度()</span><br></pre></td></tr></table></figure>
+
+<h3 id="继承类"><a href="#继承类" class="headerlink" title="继承类"></a>继承类</h3><p>​    在同一目录下，新增一个类称号继承。其中一开始定义的类叫父类，下面新增的类，叫子类</p>
+<p>父类____</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class 诛仙():</span><br><span class="line">    def __init__(self,门派,武器,坐骑,技能):</span><br><span class="line">        self.门派 = 门派</span><br><span class="line">        self.武器 = 武器</span><br><span class="line">        self.坐骑 = 坐骑</span><br><span class="line">        self.技能 = 技能</span><br><span class="line">    def 角色(self):</span><br><span class="line">        角色信息 = self.门派 + self.坐骑 + self.武器 + self.技能</span><br><span class="line">        print(&quot;创建角色成功.&quot;+ &quot;\n你的人物门派是:&quot;+self.门派+&quot;\n坐骑是：&quot;+</span><br><span class="line">              self.坐骑+&quot;\n武器是:&quot;+self.武器+&quot;\n技能是:&quot;+self.技能)</span><br><span class="line">        return 角色信息</span><br><span class="line">a = 诛仙(&quot;青云&quot;,&quot;剑&quot;,&quot;马&quot;,&quot;御剑诀&quot;)</span><br><span class="line">print(a.角色())</span><br></pre></td></tr></table></figure>
+
+<p>子类____</p>
+<p>​    解读：新增一个类的名称，括号内填写要继承父类名称。随后初始化父类的属性，并用 super() 函数让子类与父类相关联。下面就可以调用父类的定义函数了。</p>
+<p>​    在子类中，仍旧可以新增函数，先新增一个形参，随后定义个一个函数调用形参</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">class 诛仙2(诛仙):                          #标记子类，括号内填写继承的父类</span><br><span class="line">    def __init__(self,门派,武器,坐骑,技能):     #初始化父类的属性</span><br><span class="line">        super().__init__(门派,武器,坐骑,技能)   #子类与父类相关联</span><br><span class="line">        self.更新 = &quot;新的门派&quot;                   #新增一个函数并赋值</span><br><span class="line">    def 更新内容(self):</span><br><span class="line">        print(&quot;次日更新 &quot;+ str(self.更新) + &quot;了&quot;)      </span><br><span class="line">c = 诛仙2(&quot;天音&quot;,&quot;杖&quot;,&quot;龙&quot;,&quot;大慈大悲&quot;)</span><br><span class="line">print(c.角色())</span><br><span class="line">c.更新内容()      </span><br></pre></td></tr></table></figure>
+
+<h3 id="新增一个类，提供调用"><a href="#新增一个类，提供调用" class="headerlink" title="新增一个类，提供调用"></a>新增一个类，提供调用</h3><h4 id="父类"><a href="#父类" class="headerlink" title="父类"></a>父类</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">class 诛仙():</span><br><span class="line">    def __init__(self,门派,武器,坐骑,技能):</span><br><span class="line">        self.门派 = 门派</span><br><span class="line">        self.武器 = 武器</span><br><span class="line">        self.坐骑 = 坐骑</span><br><span class="line">        self.技能 = 技能</span><br><span class="line">    def 角色(self):</span><br><span class="line">        角色信息 = self.门派 + self.坐骑 + self.武器 + self.技能</span><br><span class="line">        print(&quot;创建角色成功.&quot;+ &quot;\n你的人物门派是:&quot;+self.门派+&quot;\n坐骑是：&quot;+</span><br><span class="line">              self.坐骑+&quot;\n武器是:&quot;+self.武器+&quot;\n技能是:&quot;+self.技能)</span><br><span class="line">        return 角色信息</span><br></pre></td></tr></table></figure>
+
+<h4 id="新增类"><a href="#新增类" class="headerlink" title="新增类"></a>新增类</h4><p>​    概述：新增一个名为“时装”的类，里面包含一个形参，并在此类下定义了一个函数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">class 时装():</span><br><span class="line">    def __init__(self,时装品类 = 30):</span><br><span class="line">        self.时装品类 = 时装品类</span><br><span class="line">    def 时装描述(self):</span><br><span class="line">        print(&quot;新增的时装品类一共有&quot;+ str(self.时装品类)+&quot;请鉴赏&quot;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="子类"><a href="#子类" class="headerlink" title="子类"></a>子类</h4><p>​    概述：在子类下新增一个形参等于上面新添加的一个类 </p>
+<p>​    c.引用时装类.时装描述()        理解为 c 变量下的 引用时装类（等同于上述的时装类了）这个形参所定义的一个函数。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class 诛仙2(诛仙):                          #标记子类，括号内填写继承的父类</span><br><span class="line">    def __init__(self,门派,武器,坐骑,技能):     #初始化父类的属性</span><br><span class="line">        super().__init__(门派,武器,坐骑,技能)   #子类与父类相关联</span><br><span class="line">        self.引用时装类 = 时装()                #新增一个形参，形参等于上面新增的一个类</span><br><span class="line">    def 更新内容(self):</span><br><span class="line">        print(&quot;次日更新 &quot;+ str(self.更新) + &quot;了&quot;)       </span><br><span class="line">c = 诛仙2(&quot;天音&quot;,&quot;杖&quot;,&quot;龙&quot;,&quot;大慈大悲&quot;)</span><br><span class="line">print(c.角色())</span><br><span class="line">c.更新内容()</span><br><span class="line">c.引用时装类.时装描述()  </span><br></pre></td></tr></table></figure>
+  </div>
+</article>
+
+
+    <div class="blog-post-comments">
+        <div id="utterances_thread">
+            <noscript>加载评论需要在浏览器启用 JavaScript 脚本支持。</noscript>
+        </div>
+    </div>
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/categories/">分类</a></li>
+         
+          <li><a href="/tags/">标签</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/search/">搜索</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">面向对象编程</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%8E%E4%BD%BF%E7%94%A8"><span class="toc-number"></span> <span class="toc-text">创建与使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B"><span class="toc-number"></span> <span class="toc-text">示例</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%B1%BB%E7%9A%84%E7%94%A8%E6%B3%95"><span class="toc-number"></span> <span class="toc-text">类的用法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E7%B1%BB%E4%B8%AD%E6%96%B0%E5%A2%9E%E5%87%BD%E6%95%B0"><span class="toc-number"></span> <span class="toc-text">在类中新增函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%A7%E6%89%BF%E7%B1%BB"><span class="toc-number"></span> <span class="toc-text">继承类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%A2%9E%E4%B8%80%E4%B8%AA%E7%B1%BB%EF%BC%8C%E6%8F%90%E4%BE%9B%E8%B0%83%E7%94%A8"><span class="toc-number"></span> <span class="toc-text">新增一个类，提供调用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%88%B6%E7%B1%BB"><span class="toc-number">1.</span> <span class="toc-text">父类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B0%E5%A2%9E%E7%B1%BB"><span class="toc-number">2.</span> <span class="toc-text">新增类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%90%E7%B1%BB"><span class="toc-number">3.</span> <span class="toc-text">子类</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://birkid.github.io/posts/4ec73582.html"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://birkid.github.io/posts/4ec73582.html&text=Python基础之Class（类）"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://birkid.github.io/posts/4ec73582.html&title=Python基础之Class（类）"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://birkid.github.io/posts/4ec73582.html&is_video=false&description=Python基础之Class（类）"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Python基础之Class（类）&body=Check out this article: https://birkid.github.io/posts/4ec73582.html"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://birkid.github.io/posts/4ec73582.html&title=Python基础之Class（类）"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://birkid.github.io/posts/4ec73582.html&title=Python基础之Class（类）"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://birkid.github.io/posts/4ec73582.html&title=Python基础之Class（类）"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://birkid.github.io/posts/4ec73582.html&title=Python基础之Class（类）"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://birkid.github.io/posts/4ec73582.html&name=Python基础之Class（类）&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://birkid.github.io/posts/4ec73582.html&t=Python基础之Class（类）"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    1992-2022
+    千江月
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+    <script type="text/javascript">
+      var utterances_repo = 'owner/githubrepo';
+      var utterances_issue_term = 'pathname';
+      var utterances_label = 'Comment';
+      var utterances_theme = 'github-dark';
+
+      (function(){
+          var script = document.createElement('script');
+
+          script.src = 'https://utteranc.es/client.js';
+          script.setAttribute('repo', utterances_repo);
+          script.setAttribute('issue-term', 'pathname');
+          script.setAttribute('label', utterances_label);
+          script.setAttribute('theme', utterances_theme);
+          script.setAttribute('crossorigin', 'anonymous');
+          script.async = true;
+          (document.getElementById('utterances_thread')).appendChild(script);
+      }());
+  </script>
+
+</body>
+</html>
