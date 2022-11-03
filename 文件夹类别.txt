@@ -1,7 +1,9 @@
 _posts	博客内容
 categor	分类
 tags	标签
-cover    展位图
+-data	友情链接
+repository   项目
+books	书籍
 
 
 
@@ -11,6 +13,3 @@ cover    展位图
 
 
 
-等待使用：
-link	友情链接
-_data	友情链接编写
